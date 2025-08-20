@@ -4,13 +4,15 @@ import classNames from "classnames";
 import { mainMenu } from "../../../../util/consts";
 import Button from "../../../../components/button";
 import More from "./more";
+import { useAccount } from "../../../../store/auth/hook";
 
 
 export default function Menu() {
+    const account = useAccount
     return (
-        <nav className="mt-0.5 mb-1">
+        <nav key={account} className="mt-0.5 mb-1 ">
             {mainMenu.map((menu, index) => (
-                <NavLink to={menu.path} className="block group">
+                <NavLink key={index} to={typeof menu.path === 'function' ? menu.path() : menu.path} className="block group">
                     {({ isActive }) => (
                         <div className={classNames("p-3 rounded-full inline-flex items-center gap-5 text-xl group-hover:bg-[#eff3f41a] transition-colors",
                             { "font-bold": isActive })}>
@@ -33,7 +35,7 @@ export default function Menu() {
             ))}
             <More />
             <div className="w-[90%]">
-                <Button size={"large"}>Gönder</Button>
+                <Button size={"large"}>Gönderi yayınla</Button>
             </div>
 
         </nav>
