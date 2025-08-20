@@ -1,4 +1,4 @@
-export default function Verified() {
+export default function verified() {
     return (
         <div>
             verified

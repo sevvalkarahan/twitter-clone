@@ -2,14 +2,15 @@ import { NavLink } from "react-router-dom";
 import classname from "classnames"
 import classNames from "classnames";
 import { mainMenu } from "../../../../util/consts";
-import Button from "../../../../components";
+import Button from "../../../../components/button";
 import More from "./more";
+
 
 export default function Menu() {
     return (
         <nav className="mt-0.5 mb-1">
             {mainMenu.map((menu, index) => (
-                <NavLink to={menu.path} className="py-1 block group">
+                <NavLink to={menu.path} className="block group">
                     {({ isActive }) => (
                         <div className={classNames("p-3 rounded-full inline-flex items-center gap-5 text-xl group-hover:bg-[#eff3f41a] transition-colors",
                             { "font-bold": isActive })}>
@@ -31,7 +32,7 @@ export default function Menu() {
                 </NavLink>
             ))}
             <More />
-            <div className="py-4 w-[90%]">
+            <div className="w-[90%]">
                 <Button size={"large"}>Gönder</Button>
             </div>
 

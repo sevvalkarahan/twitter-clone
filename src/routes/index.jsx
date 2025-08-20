@@ -6,10 +6,11 @@ import NotFound from '../pages/notFound'
 import Home from '../pages/home'
 import MainLayout from '../layouts/main'
 import Messages from '../pages/messages'
-import Lists from '../pages/lists'
-import BookMarks from '../pages/bookmarks'
-import Verified from '../pages/verified'
 import Profile from '../pages/profile'
+import Grok from '../pages/grok'
+import Community from '../pages/community'
+import Premium from '../pages/premium'
+import Verified from '../pages/verified'
 
 const routes = createBrowserRouter([
     {
@@ -33,12 +34,16 @@ const routes = createBrowserRouter([
                 element: <Messages />
             },
             {
-                path: "lists",
-                element: <Lists />
+                path: "grok",
+                element: <Grok />
             },
             {
-                path: "bookmarks",
-                element: <BookMarks />
+                path: "community",
+                element: <Community />
+            },
+            {
+                path: "premium",
+                element: <Premium />
             },
             {
                 path: "verified",

@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+    --shadow-box: rgba(255, 255, 255, 0.2) 0 0 15px, rgba(255, 255, 255, 0.15) 0 0 3px 1px;
+}
+
 body {
     @apply bg-black text-white text-[15px]
 }
