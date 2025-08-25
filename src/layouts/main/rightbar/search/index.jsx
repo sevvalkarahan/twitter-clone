@@ -14,13 +14,13 @@ export default function Search() {
     return (
         <div
             ref={ref}
-            className="min-h-[2rem] h-[3.313rem] mb-3 flex items-center sticky top-0 bg-[color:var(--background-primary)] z-10"
+            className="min-h-[2rem] h-[3.313rem] mb-3 flex items-center sticky top-0 bg-black z-10 "
         >
             <label className="h-[2.688rem] rounded-full  w-full relative group border border-transparent  focus-within:border-[#1d9bf0]">
                 <div className="w-[3.5rem] h-full flex items-center justify-center absolute top-0 left-0 pointer-events-none">
                     <svg
                         viewBox="0 0 24 24"
-                        className="h-[1.172rem] min-w-[2rem] text-[color:var(--color-base-secondary)] group-focus-within:text-[color:var(--color-primary)]"
+                        className="h-[1.172rem] min-w-[2rem] text-[#71767b] "
                     >
                         <path
                             fill="currentColor"
@@ -40,7 +40,7 @@ export default function Search() {
                     <button
                         type="button"
                         onClick={() => setQuery('')}
-                        className="w-[22px] h-[22px] rounded-full bg-[color:var(--color-primary)] flex items-center justify-center text-black min-w-[22px] absolute top-1/2 -translate-y-1/2 right-3"
+                        className="w-[22px] h-[22px] rounded-full  flex items-center justify-center text-black min-w-[22px] absolute top-1/2 -translate-y-1/2 right-3"
                     >
                         <svg viewBox="0 0 24 24" width={22} height={22} >
                             <path
@@ -53,8 +53,8 @@ export default function Search() {
             </label>
             {focus && (
                 <div
-                    className="absolute w-[350px] top-full -left-px -translate-y-1 bg-[color:var(--background-primary)] shadow-box max-h-[calc(80vh-53px)] rounded-lg text-center min-h-[100px]">
-                    <p className="p-3 pt-5 text-[color:var(--color-base-secondary)] leading-5">
+                    className="absolute w-[350px] top-full -left-px -translate-y-1 bg-black shadow-box max-h-[calc(80vh-53px)] rounded-lg text-center min-h-[100px]">
+                    <p className="p-3 pt-5 text-[#71767b] leading-5">
                         Kişileri, listeleri veya anahtar kelimeleri aramayı dene
                     </p>
                 </div>

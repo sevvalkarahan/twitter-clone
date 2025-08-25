@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import classname from "classnames"
 import classNames from "classnames";
 import { mainMenu } from "../../../../util/consts";
 import Button from "../../../../components/button";
